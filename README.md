@@ -1,87 +1,122 @@
 # 🛡️ Driver Safety Monitoring System
 
-AI-powered real-time drowsiness, yawn, distraction and head-nod detection
-using **Streamlit + OpenCV + MediaPipe**.
+AI-powered real-time driver monitoring system using **Streamlit, OpenCV, and MediaPipe**.
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Features
 
-### 1. Create virtual environment (recommended)
-```bash
-python -m venv venv
-source venv/bin/activate        # macOS / Linux
-venv\Scripts\activate           # Windows
-```
+* 👁️ Drowsiness Detection (Eye Aspect Ratio)
+* 🥱 Yawn Detection (Mouth Aspect Ratio)
+* 👁️ Distraction Detection (Face off-center)
+* ⚡ Head Nod Detection (Micro-sleep)
+* 📊 Fatigue Score (0–100)
+* 🔊 Audio Alerts
+* 📁 CSV Trip Logging
+* 🌙 Dark / Light Mode UI
 
-### 2. Install dependencies
+---
+
+## 🧠 How It Works
+
+The system uses **MediaPipe Face Mesh** to track facial landmarks and calculates:
+
+* Eye Aspect Ratio (EAR)
+* Mouth Aspect Ratio (MAR)
+
+Based on these values, it detects:
+
+* Drowsiness
+* Yawning
+* Distraction
+* Head nods
+
+---
+
+## 🖥️ Tech Stack
+
+* Python 3.11
+* Streamlit
+* OpenCV
+* MediaPipe
+* NumPy
+* Pandas
+
+---
+
+## 📦 Installation
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the app
+---
+
+## ▶️ Run the App
+
 ```bash
 streamlit run app.py
 ```
 
-Open your browser at **http://localhost:8501**
+Open:
+
+```
+http://localhost:8501
+```
 
 ---
 
-## 🧩 Features
+## ⚙️ Adjustable Parameters
 
-| Feature | Description |
-|---|---|
-| 👁️ EAR Drowsiness | Eye Aspect Ratio below threshold for N frames → alert |
-| 🥱 Yawn Detection | Mouth Aspect Ratio (MAR) threshold → yawn alert |
-| ⚡ Head Nod | Sudden nose-tip Y drop → micro-sleep alert |
-| 📍 Distraction | Face off-centre > 2.5 s → distraction alert |
-| 📊 Fatigue Score | 0-100 composite score (🟢 Safe / 🟡 Warning / 🔴 Critical) |
-| 🔊 Audio Alerts | Pygame synthesised beeps per alert type |
-| 📁 CSV Logging | Auto-saved trip log with timestamps |
-| 🌙 Dark / Light | Toggle in dashboard header |
+```python
+EAR_THRESHOLD = 0.20
+EAR_CONSEC_FRAMES = 30
+MAR_THRESHOLD = 0.65
+DISTRACTION_SECONDS = 2.5
+```
 
 ---
 
-## 📦 Package Notes
-
-- **mediapipe** — requires Python 3.8–3.11 and a 64-bit OS
-- **pygame** — used for synthesised beep alerts (no external audio files needed)
-- If `pygame` fails to install, the app still works silently
-
----
-
-## 🗂️ Project Structure
+## 📊 Project Structure
 
 ```
 drowsiness_detection/
-├── app.py            ← single runnable Streamlit app
-├── requirements.txt  ← all Python dependencies
-└── README.md         ← this file
-```
-
-Trip CSV logs are saved to the same directory as `app.py`.
-
----
-
-## ⚙️ Adjustable Thresholds (top of app.py)
-
-```python
-EAR_THRESHOLD       = 0.22   # lower → more sensitive
-EAR_CONSEC_FRAMES   = 20     # fewer → faster alert
-MAR_THRESHOLD       = 0.65   # yawn sensitivity
-DISTRACTION_SECONDS = 2.5    # seconds off-centre before alert
+│── app.py
+│── requirements.txt
+│── README.md
 ```
 
 ---
 
-## 🎓 College Demo Tips
+## 🎯 Use Cases
 
-1. Run in a well-lit room for best face detection
-2. Sit about **50–80 cm** from the webcam
-3. Enter your name on the dashboard before starting
-4. Click **Stop & Summary** to see the full trip report and download CSV
+* Driver safety systems
+* Smart vehicles
+* Fleet monitoring
+* College projects
 
 ---
 
-*Built with ❤️ using Streamlit, OpenCV, and MediaPipe*
+## ⚠️ Notes
+
+* Works best in good lighting
+* Keep face clearly visible
+* Webcam required
+
+---
+
+## 👩‍💻 Author
+
+Vedika Srivastava
+
+---
+
+## 💡 Future Improvements
+
+* 🎤 Voice alerts
+* 📊 Advanced analytics
+* ☁️ Cloud deployment
+
+---
+
+⭐ If you like this project, give it a star!
