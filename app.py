@@ -1,10 +1,3 @@
-"""
-╔══════════════════════════════════════════════════════════════════════╗
-║      DRIVER SAFETY MONITORING SYSTEM — app.py  (Friendly UI)         ║
-║  Stack: Streamlit · OpenCV · MediaPipe · NumPy · Pandas · Pygame     ║
-╚══════════════════════════════════════════════════════════════════════╝
-Run:  streamlit run app.py
-"""
 
 # ─────────────────────────────────────────────────────────────────────
 # IMPORTS
