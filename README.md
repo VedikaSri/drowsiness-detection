@@ -1,23 +1,23 @@
-# 🛡️ Driver Safety Monitoring System
+#  Driver Safety Monitoring System
 
 AI-powered real-time driver monitoring system using **Streamlit, OpenCV, and MediaPipe**.
 
 ---
 
-## 🚀 Features
+##  Features
 
-* 👁️ Drowsiness Detection (Eye Aspect Ratio)
-* 🥱 Yawn Detection (Mouth Aspect Ratio)
-* 👁️ Distraction Detection (Face off-center)
-* ⚡ Head Nod Detection (Micro-sleep)
-* 📊 Fatigue Score (0–100)
-* 🔊 Audio Alerts
-* 📁 CSV Trip Logging
-* 🌙 Dark / Light Mode UI
+* Drowsiness Detection (Eye Aspect Ratio)
+* Yawn Detection (Mouth Aspect Ratio)
+* Distraction Detection (Face off-center)
+* Head Nod Detection (Micro-sleep)
+* Fatigue Score (0–100)
+* Audio Alerts
+* CSV Trip Logging
+* Dark / Light Mode UI
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 The system uses **MediaPipe Face Mesh** to track facial landmarks and calculates:
 
@@ -33,7 +33,7 @@ Based on these values, it detects:
 
 ---
 
-## 🖥️ Tech Stack
+## Tech Stack
 
 * Python 3.11
 * Streamlit
@@ -44,7 +44,7 @@ Based on these values, it detects:
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 pip install -r requirements.txt
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run the App
+## Run the App
 
 ```bash
 streamlit run app.py
@@ -66,7 +66,7 @@ http://localhost:8501
 
 ---
 
-## ⚙️ Adjustable Parameters
+## Adjustable Parameters
 
 ```python
 EAR_THRESHOLD = 0.20
@@ -77,7 +77,7 @@ DISTRACTION_SECONDS = 2.5
 
 ---
 
-## 📊 Project Structure
+## Project Structure
 
 ```
 drowsiness_detection/
@@ -88,7 +88,7 @@ drowsiness_detection/
 
 ---
 
-## 🎯 Use Cases
+## Use Cases
 
 * Driver safety systems
 * Smart vehicles
@@ -97,7 +97,7 @@ drowsiness_detection/
 
 ---
 
-## ⚠️ Notes
+## Notes
 
 * Works best in good lighting
 * Keep face clearly visible
@@ -105,18 +105,16 @@ drowsiness_detection/
 
 ---
 
-## 👩‍💻 Author
+##  Author
 
 Vedika Srivastava
 
 ---
 
-## 💡 Future Improvements
+## Future Improvements
 
-* 🎤 Voice alerts
-* 📊 Advanced analytics
-* ☁️ Cloud deployment
+*  Voice alerts
+*  Advanced analytics
+*  Cloud deployment
 
----
 
-⭐ If you like this project, give it a star!
